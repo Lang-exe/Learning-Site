@@ -1,0 +1,35 @@
+class courses
+{
+    private static $course = [
+        [
+                "nama" => "Python",
+                "slug" => "latihan-python"
+        ],
+        [
+                "nama" => "C",
+                "slug" => "latihan-C"
+        ],
+        [
+                "nama" => "C++",
+                "slug" => "latihan-C++"
+        ]
+    ];
+
+    public static function all() 
+    {
+        return self::$course;
+    }
+
+    public static function find($slug,$nama) 
+    {
+        $course = self::$course;
+        $singlecourse = [];
+        foreach($course as $post){
+            if($post["slug"] === $slug){
+                $singlecourse = $post;
+            }
+        }
+    
+        return $post;
+    }
+}
