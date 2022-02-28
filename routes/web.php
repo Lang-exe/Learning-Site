@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\Controller;
-use App\Http\Controllers\CoursesController;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LogInController;
+use App\Http\Controllers\CoursesController;
+use App\Http\Controllers\RegisterController;
 
 
 /*
@@ -34,8 +36,10 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/courses', [CoursesController::class, 'index']);
+Route::get('/course', [CoursesController::class, 'index']);
 Route::get('/SingleCourse/{slug}', [CoursesController::class, 'index2']);
 
-Route::get('/login', [Controller::class, 'LogIn']);
-Route::get('/register', [Controller::class, 'Regis']);
+Route::get('/login', [LogInController::class, 'index']);
+
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'index2']);

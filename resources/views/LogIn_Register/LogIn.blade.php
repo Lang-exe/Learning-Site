@@ -19,7 +19,7 @@
         <br>
         <button class="w-100 btn btn-lg" style="background-color: rgba(0, 149, 199, 0.575); color: white;" type="submit">Sign in</button>
       </form>
-      <p style="margin-top: 3px;">Click here to <a href="/register">Register</a>.</p>
+      <p style="margin-top: 3px;">Click here to <a href="/register">Register</a></p>
     </main>
     </div>
   </div>
