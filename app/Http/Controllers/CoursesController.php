@@ -15,7 +15,7 @@ class CoursesController extends Controller
      */
     public function index()
     {
-        return view('Courses', [
+        return view('Course.Courses', [
             "title" => "Courses",
             "courses" => courses::all()
         ]);
@@ -23,7 +23,7 @@ class CoursesController extends Controller
 
     public function index2($slug)
     {
-        return view('SingleCourse', [
+        return view('Course.SingleCourse', [
             "course" => courses::find($slug),
             "title" => "Single Course",
         ]);

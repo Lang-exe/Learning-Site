@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\CoursesController;
 use Illuminate\Support\Facades\Route;
-use App\Models\courses;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('About', [
+    return view('About Web.About', [
         "title" => "About"
     ]);
 });
@@ -36,14 +37,5 @@ Route::get('/about', function () {
 Route::get('/courses', [CoursesController::class, 'index']);
 Route::get('/SingleCourse/{slug}', [CoursesController::class, 'index2']);
 
-Route::get('/login', function () {
-    return view('LogIn', [
-        "title" => "Log In"
-    ]);
-});
-
-Route::get('/register', function () {
-    return view('Register', [
-        "title" => "Register"
-    ]);
-});
+Route::get('/login', [Controller::class, 'LogIn']);
+Route::get('/register', [Controller::class, 'Regis']);

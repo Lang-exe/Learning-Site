@@ -1,8 +1,8 @@
-@extends('Layout.TemplateCourse')
+@extends('Layout.Template2')
 
 @section('containerPertama')
   <h1 class="display-4" style="text-align: center">Courses</h1>
-  <br><br>
+  <br>
   @foreach($courses as $course)
     <div class="container">
       <div style="display: flex; background-color: #f1f1f1;">

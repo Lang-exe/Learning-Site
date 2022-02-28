@@ -1,8 +1,8 @@
-@extends('Layout.TemplateCourse')
+@extends('Layout.Template2')
 
 @section('containerPertama')
   <h1 class="display-4" style="text-align: center">{{ $course->nama }}</h1>
-  <br><br>
+  <br>
   <div class="container">
       <div style="display: flex; background-color: #f1f1f1;">
           <div style="background-color: rgba(0, 149, 199, 0.192);width:100%;
